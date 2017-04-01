@@ -8,4 +8,5 @@
 * [414.Divede Two Integers](414.md)
 * [460.K Closest Numbers In Sorted Array](460k-closest-numbers-in-sorted-array.md)
 * [75.Find Peak Element](75find-peak-element.md)
+* [585.Maximum Number in Mountain Sequence](585maximum-number-in-mountain-sequence.md)
 
