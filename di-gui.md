@@ -1,0 +1,82 @@
+| dfs | dfs |
+| :--- | :--- |
+| 递归实现： | 非递归实现 |
+| 1.遍历法 |  |
+| 2.分治法 |  |
+
+**以上dfs的两种实现方法。**
+
+#### 
+
+#### 二叉树三种遍历：
+
+前： 根左右
+
+中：左根右
+
+后：左右根
+
+#### **遇到二叉树问题 先考虑问题的结果在整棵树上关系 和 结果在左右儿子树上的关系是什么。**
+
+例如中序遍历一个二叉树：
+
+```
+              root
+
+    /                        \
+```
+
+root.left               root.right
+
+在整棵树上结果为： root.val  加上 左子树所有结果 和 右子树所有结果
+
+在左子树的结果为：   root.left 加上 root.left.left 和 root.left.rigth
+
+大问题 和 小问题 解决方法相同 ， 可以用递归实现。
+
+
+
+#### 再例如： **求Maximum Depth of Binary Tree**
+
+该问题在整颗数上结果为：（ 左子树和右子树的深度 的最大值 ） + 1
+
+在左子树（右子树）结果相同。
+
+#### 可以用**分治法**实现：
+
+`public class Solution {`
+
+`/**`
+
+`* @param root: The root of binary tree.`
+
+`* @return: An integer.`
+
+`*/`
+
+`public int maxDepth(TreeNode root) {`
+
+`// write your code here`
+
+`if(root == null) {`
+
+`return 0;`
+
+`}`
+
+`int leftDepth = maxDepth(root.left);`
+
+`int rightDepth = maxDepth(root.right);`
+
+`return Math.max(leftDepth, rightDepth) + 1;`
+
+`}`
+
+`}`
+
+### 体会最后一行 return Math.max（ 。。。）  _**+  1**_** 的**_**回溯 **_**感觉（返回上一层时深度 +1）**
+
+
+
+
+
