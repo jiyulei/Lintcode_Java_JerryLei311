@@ -16,9 +16,13 @@ result.addAll\(list\);//把list中的每一个元素加到result中，result.siz
 
 result.add\(list\);//将list作为一个元素加到result中，则result.size\(\)为1
 
+
+
 **2**. results.remove\( index\);// 除去index 位置的元素，
 
 results.size\(\) // 求此arraylist 的长度
 
+3.Integer.MAX\_VALUE //正无穷
 
+Integer.MIN\_VALUE// 负无穷
 
